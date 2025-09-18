@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("https://images.unsplash.com/photo-1505842465776-3d90f616310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80") 
+                  no-repeat center center/cover;
+    }
+
+    .card {
+      width: 500px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      color: #fff;
+      text-align: left;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ffe066;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 4px solid #ffe066;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+    }
+
+    b {
+      color: #ffcc00;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Your Form Data</h1>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    // Read saved data from localStorage
+    const data = JSON.parse(localStorage.getItem("formData"));
+
+    // Show it on the page
+    if(data){
+      document.getElementById("output").innerHTML = `
+        <p><b>Name of Federation:</b> ${data.name}</p>
+        <p><b>No of Sports:</b> ${data.sports}</p>
+        <p><b>No of Events:</b> ${data.events}</p>
+        <p><b>Total number of subevents:</b> ${data.subevents}</p>
+        <p><b>Total number of Players:</b> ${data.players}</p>
+        <p><b>Duration of Events (begin):</b> ${data.Duration}</p>
+        <p><b>Duration of Events (end):</b> ${data.Duration1}</p>
+      `;
+    } else {
+      document.getElementById("output").textContent = "No form data found!";
+    }
+  </script>
+</body>
+</html>

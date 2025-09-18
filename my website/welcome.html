@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    span {
+      font-weight: bold;
+      color: #ffe57f;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff4b2b;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff6f61;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, <span id="user"></span> 🎉</h1>
+    <p>Email: <span id="email"></span></p>
+    <p>Mobile: <span id="mobile"></span></p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    document.getElementById("user").innerText = localStorage.getItem("username");
+    document.getElementById("email").innerText = localStorage.getItem("email");
+    document.getElementById("mobile").innerText = localStorage.getItem("mobile");
+
+    function logout() {
+      alert("You have been logged out.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

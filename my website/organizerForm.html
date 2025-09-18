@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Organizer Registration</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("https://images.unsplash.com/photo-1505842465776-3d90f616310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80") 
+                  no-repeat center center/cover;
+    }
+
+    .container {
+      width: 420px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #ffe066;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      box-shadow: 0 0 8px #ffe066;
+      transform: scale(1.02);
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ffe066, #ff9900);
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ffcc00, #ff6600);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container {
+        width: 90%;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      h1 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Organizer Registration</h2>
+    <h1>MULTI-SPORT & EVENT MANAGEMENT SYSTEM</h1>
+
+    <form id="myForm">
+      <label>Name of Federation</label>
+      <input type="text" name="name" required>
+
+      <label>No of Sports</label>
+      <input type="number" name="sports" required>
+
+      <label>No of Events</label>
+      <input type="number" name="events" required>
+
+      <label>Total number of subevents</label>
+      <input type="number" name="subevents" required>
+
+      <label>Total number of Players</label>
+      <input type="number" name="players" required>
+
+      <label>Duration of Events (begin)</label>
+      <input type="date" name="Duration" required>
+
+      <label>Duration of Events (end)</label>
+      <input type="date" name="Duration1" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
+
+      localStorage.setItem("formData", JSON.stringify(data));
+      window.location.href = "organizerdisplay.html";
+    });
+  </script>
+</body>
+</html>

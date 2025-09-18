@@ -1,0 +1,241 @@
+
+    /* ===== Reset & Base ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      height: 60px;
+      position: fixed;
+      width: 100%;
+    }
+    #nav-title {
+      display: flex;
+      flex-direction: column;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+
+    }
+    #nav-title-main {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    #nav-title-sub {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1;
+      text-align: center;
+    }
+
+    #search-bar {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar input  {
+      padding: 5px;
+      border: none;
+      border-radius: 3px 0 0 3px;
+      width: 250px;
+      font-size: 16px;
+      padding: 5px;
+      outline: none;
+    }    
+    #search-bar input:hover {
+      border: 1.5px solid #c9882c;
+    }
+    #search-bar button {
+      padding: 5px 10px;
+      border: none;
+      width: 80px;
+      background: #f0a606;
+      color: white;
+      border-radius: 0 3px 3px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #search-bar button:hover { background: #e68900; 
+    font-size: 16px;}
+
+    nav h1 { font-size: 15px; }
+   
+    
+
+
+
+     .main_box{
+    background-image: url(photo.jpg);
+    background-size: cover;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+
+}
+.btn_one{
+    color: rgb(204, 207, 209);
+    
+    font-size: 20px;
+    font-weight: 70;
+    left: 16px;
+    line-height: 60px;
+
+}
+.sidebar_menu{
+    position: fixed;
+    left: -250px;
+    width: 200px;
+    height: 60%;
+    background: rgba(89, 88, 88, 0.8);
+    box-shadow: 0 0 15px rgba(174, 171, 171, 0.5);
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    border: 1px solid rgb(198, 198, 197);
+    box-shadow: 0 0 0px rgba(201, 196, 196, 0.5);
+    border-radius: 5px;
+
+
+}
+.sidebar_menu .logo a{
+    position:absolute;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 20;
+}
+.sidebar_menu .btn_two{
+    color: rgb(160, 163, 164);
+    font-size: 20px;
+    line-height: 40px;
+    position: absolute;
+    left: 170px;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    top: 34px;
+    width: 100%;
+    left: 0px;
+}
+.sidebar_menu .menu li{
+    margin-top: 6px;
+    padding:7px 35px;
+}
+.sidebar_menu .menu i,a{
+    color: aliceblue;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+
+#check{
+    display: none;
+}
+.menu li:hover{
+    background:  rgba(89, 88, 88, 0.8);
+    border-radius: 5px;
+    border: 1px,solid,rgb(230, 238, 251);
+
+}
+.btn_two:hover{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+#check:checked ~ .sidebar_menu{
+    left: 0;
+
+}#check:checked ~ .btn_one{
+    opacity: 0;
+} 
+
+    /* ===== Hero Section ===== */
+    .hero {
+      height: 100vh;
+      background-image: url(https://img.freepik.com/premium-photo/poster-sports-event-with-city-background_925376-14106.jpg);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h2 { font-size: 40px; margin-bottom: 10px; }
+    .hero p { font-size: 18px; margin-bottom: 20px; }
+    .btn {
+      padding: 10px 20px;
+      background: #fcba3f;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+
+    }
+    .btn:hover { background: #d6a605;
+    font-size: 17px;
+  color: rgb(234, 225, 205); }
+
+    /* ===== About Section ===== */
+    .about {
+      padding: 40px 20px;
+      text-align: center;
+      height: 100vh;
+    }
+    .about h2 { margin-bottom: 20px; color: #333; }
+    .about p { max-width: 700px; margin: auto; color: #555; }
+    .about-btn {
+      padding: 5px 10px;
+      background: #7e55f8;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .about-btn:hover { background: #0548d8;
+    font-size: 17px;color:#e6dcf1 }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 30px; }
+      .hero p { font-size: 13px; }
+      #search-bar input {
+        width: 100%;
+        padding: 4px;
+        font-size: 14px;
+        width: 60%;
+      }
+      #search-bar button {
+        width: 20%;
+        padding: 4px;
+        font-size: 14px;
+      }
+      #search-bar {
+      display: flex;
+      align-items: center;
+      width: 300px;
+    }
+    }
+    
