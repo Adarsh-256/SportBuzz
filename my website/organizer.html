@@ -86,8 +86,16 @@
     <form action="/upload" method="post" enctype="multipart/form-data">
       <label for="fileUpload">Upload your event logo</label>
       <input type="file" id="fileUpload" name="myfile" required>
-      <button type="submit">Create Your Event</button>
+      <button onclick="create()" type="submit">Create Your Event</button>
     </form>
   </div>
 </body>
+<script>
+  function create(){
+    window.location.href="organizerForm.html";
+    alert("congrats!! You successfully enter the Organizer InterfaceForm");
+
+
+  }
+</script>
 </html>

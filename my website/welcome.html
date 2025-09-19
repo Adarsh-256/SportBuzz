@@ -55,6 +55,23 @@
       background: #ff6f61;
       transform: scale(1.05);
     }
+     #btn{
+      margin-top: 20px;
+      padding: 10px 25px;
+      margin-left: 23px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #18f50d;
+      color: white;
+      transition: 0.3s;
+    }
+
+    #btn:hover {
+      background: #19a304;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -63,6 +80,7 @@
     <p>Email: <span id="email"></span></p>
     <p>Mobile: <span id="mobile"></span></p>
     <button onclick="logout()">Logout</button>
+    <button onclick="proceed()" id="btn">Proceed</button>
   </div>
 
   <script>
@@ -71,8 +89,14 @@
     document.getElementById("mobile").innerText = localStorage.getItem("mobile");
 
     function logout() {
-      alert("You have been logged out.");
       window.location.href = "login.html";
+      alert("You have been logged out.");
+
+    }
+    function proceed(){
+      window.location.href ="organizer.html";
+      alert("congrats!! You successfully enter the Organizer Interface");
+
     }
   </script>
 </body>

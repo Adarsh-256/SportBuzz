@@ -22,16 +22,18 @@
 
     }
     #nav-title-main {
-      font-size: 20px;
+      font-size: 25px;
       font-weight: bold;
       line-height: 1;
+      color: #e80aa9;
     }
 
     #nav-title-sub {
-      font-size: 12px;
+      font-size: 15px;
       font-weight: normal;
       line-height: 1;
       text-align: center;
+      color: #ac0aa4;
     }
 
     #search-bar {
@@ -64,11 +66,9 @@
     #search-bar button:hover { background: #e68900; 
     font-size: 16px;}
 
-    nav h1 { font-size: 15px; }
+    nav h1 { font-size: 15px;
+     }
    
-    
-
-
 
      .main_box{
     background-image: url(photo.jpg);
@@ -159,6 +159,36 @@
     opacity: 0;
 } 
 
+#home{
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+#home:hover{
+  color: #f0a606;
+  font-size: 17px;
+}
+
+#button {
+      margin-top: 15px;
+      padding: 5px 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #0062ff;
+      color: rgb(245, 246, 248);
+      transition: 0.3s;
+    }
+
+    #button:hover {
+      background: #1a0278;
+      transform: scale(1.05);
+      color: #c1d5f5;
+    }
+
     /* ===== Hero Section ===== */
     .hero {
       height: 100vh;
@@ -170,22 +200,34 @@
       align-items: center;
       text-align: center;
     }
-    .hero h2 { font-size: 40px; margin-bottom: 10px; }
-    .hero p { font-size: 18px; margin-bottom: 20px; }
+    .hero h1 { font-size: 40px; margin-bottom: 10px;
+    color:rgb(5, 175, 20);
+    font-size: 45px;margin-bottom: 0px;
+ }
+    .hero h3 { font-size: 18px; margin-bottom: 20px; 
+    color: rgb(30, 102, 6);
+    font-size: 20px;
+  text-shadow: #99d805;
+margin-bottom: 0px;}
     .btn {
-      padding: 10px 20px;
-      background: #fcba3f;
+      padding: 3px 15px;
+      background: #b73ffc;
       border: none;
-      color: white;
+      color: rgb(246, 241, 241);
       cursor: pointer;
-      font-size: 16px;
+      font-size: 19px;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 10px;
 
     }
-    .btn:hover { background: #d6a605;
-    font-size: 17px;
-  color: rgb(234, 225, 205); }
+    .btn:hover { background: #9704c0;
+    font-size: 20px;
+  color: rgb(211, 174, 92); }
+  #organizer{
+    color: #81027f;
+    font-size: 36px;
+    margin-top: 90px;
+  }
 
     /* ===== About Section ===== */
     .about {
@@ -208,6 +250,15 @@
     .about-btn:hover { background: #0548d8;
     font-size: 17px;color:#e6dcf1 }
 
+    /* event section */
+    #events{
+      padding: 40px 20px;
+      text-align: center;
+      height: 100vh;
+    }
+    #events h1{ margin-bottom: 20px; color: #333; }
+    #events p{ max-width: 700px; margin: auto; color: #555; }
+
     /* ===== Footer ===== */
     footer {
       background: #333;
@@ -218,7 +269,7 @@
     }
 
     /* ===== Responsive ===== */
-    @media (max-width: 600px) {
+    @media (max-width: 870px) {
       .hero h2 { font-size: 30px; }
       .hero p { font-size: 13px; }
       #search-bar input {
@@ -237,5 +288,45 @@
       align-items: center;
       width: 300px;
     }
+    #home{
+      display: none;
+    }
+    }
+    @media (max-width: 600px) {
+      .Register-btn{
+        display: none;
+      } #nav-title{
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+
+    }
+@media (max-width: 400px) {
+      .Login-btn{
+      font-size: 8px;
+      height: 10px;
+      background-color: #ac0aa4;
+      }
+        
+      #search-bar button {
+        width: 40%;
+        padding: 4px;
+        font-size: 14px;
+      }
+      #search-bar {
+        margin-left: 10px;
+        width: 100px;   
+    }
+    #nav-title-main {
+      font-size: 20px;
+    }
+
+    #nav-title-sub {
+      font-size: 10px;
+    }
+    #nav-title{
+      margin-left: 5px;
     }
     
+
+    }
